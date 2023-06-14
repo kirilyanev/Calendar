@@ -46,7 +46,11 @@ function createCalendar(year, month) {
       table.appendChild(row);
     }
   }
+
+  // Get current month
+  const date = new Date();
+  const currentMonth = date.getMonth();
   
-  // Usage example: create a calendar for June 2023
-  createCalendar(2023, 5);
+  // Usage example: create a calendar for current month
+  createCalendar(2023, currentMonth);
   
