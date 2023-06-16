@@ -1,6 +1,9 @@
+const mainDate = new Date();
+let today = mainDate.getDate();
+console.log(today);
 function createCalendar(year, month) {
     const calendar = document.getElementById("calendar");
-  
+
     // Get the number of days in the month
     const numDays = new Date(year, month + 1, 0).getDate();
   
@@ -25,7 +28,7 @@ function createCalendar(year, month) {
   
     // Create the calendar cells
     let date = 1;
-  
+
     for (let i = 0; i < 6; i++) {
       const row = document.createElement("tr");
   
@@ -38,6 +41,9 @@ function createCalendar(year, month) {
         } else {
           const td = document.createElement("td");
           td.textContent = date;
+          if (date === today) {
+            td.setAttribute('id', 'today');
+          }
           row.appendChild(td);
           date++;
         }
@@ -48,8 +54,7 @@ function createCalendar(year, month) {
   }
 
   // Get current month
-  const date = new Date();
-  const currentMonth = date.getMonth();
+  const currentMonth = mainDate.getMonth();
   
   // Usage example: create a calendar for current month
   createCalendar(2023, currentMonth);
