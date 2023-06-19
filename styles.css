@@ -22,3 +22,7 @@ table th {
   color: white;
   background-color: #4CAF50;
 }
+
+#month {
+  text-align: center;
+}

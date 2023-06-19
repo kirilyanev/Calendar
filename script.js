@@ -1,8 +1,16 @@
+// Get full date, month and day
 const mainDate = new Date();
-let today = mainDate.getDate();
-console.log(today);
+const monthNumber = mainDate.getMonth();
+const today = mainDate.getDate();
+
+const monthElement = document.querySelector('#month');
+const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+
 function createCalendar(year, month) {
     const calendar = document.getElementById("calendar");
+
+    // Set the month
+    monthElement.textContent = months[monthNumber];
 
     // Get the number of days in the month
     const numDays = new Date(year, month + 1, 0).getDate();
