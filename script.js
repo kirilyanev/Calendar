@@ -2,6 +2,8 @@
 const mainDate = new Date();
 const monthNumber = mainDate.getMonth();
 const today = mainDate.getDate();
+const year = mainDate.getFullYear();
+console.log(year);
 
 const monthElement = document.querySelector('#month');
 const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
@@ -10,7 +12,7 @@ function createCalendar(year, month) {
     const calendar = document.getElementById("calendar");
 
     // Set the month
-    monthElement.textContent = months[monthNumber];
+    monthElement.textContent = `${months[monthNumber]} ${year}`;
 
     // Get the number of days in the month
     const numDays = new Date(year, month + 1, 0).getDate();
