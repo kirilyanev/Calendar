@@ -3,7 +3,6 @@ const mainDate = new Date();
 const monthNumber = mainDate.getMonth();
 const today = mainDate.getDate();
 const year = mainDate.getFullYear();
-console.log(year);
 
 const monthElement = document.querySelector('#month');
 const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
@@ -65,7 +64,7 @@ function createCalendar(year, month) {
 
   // Get current month
   const currentMonth = mainDate.getMonth();
-  
+
   // Usage example: create a calendar for current month
   createCalendar(2023, currentMonth);
   
